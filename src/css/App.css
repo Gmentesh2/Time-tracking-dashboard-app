@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: hsl(226, 43%, 10%);
+  min-height: 100vh;
+}
+/* 
+- Blue: hsl(246, 80%, 60%)
+
+- Light red (work): hsl(15, 100%, 70%)
+- Soft blue (play): hsl(195, 74%, 62%)
+- Light red (study): hsl(348, 100%, 68%)
+- Lime green (exercise): hsl(145, 58%, 55%)
+- Violet (social): hsl(264, 64%, 52%)
+- Soft orange (self care): hsl(43, 84%, 65%)
+
+### Neutral
+
+- Very dark blue: hsl(226, 43%, 10%)
+- Dark blue: hsl(235, 46%, 20%)
+- Desaturated blue: hsl(235, 45%, 61%)
+- Pale Blue: hsl(236, 100%, 87%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 18px (card titles e.g. Work, Play)
+
+### Font
+
+- Family: [Rubik](https://fonts.google.com/specimen/Rubik)
+- Weights: 300, 400, 500 */
+
+.time-tracker {
+  margin: auto;
+}
+.time-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 100%;
+  gap: 20px;
+}
+
+/*profile card*/
+/*profile card*/
+/*profile card*/
+.profile-card {
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 14px;
+  grid-row: 1/3;
+}
+.card-heading {
+  background-color: hsl(246, 80%, 60%);
+  border-radius: 14px;
+  padding: 30px;
+}
+.profileImage {
+  width: 70px;
+  height: 70px;
+  border: 3px solid rgb(221, 219, 219);
+  border-radius: 50%;
+}
+.report-for {
+  color: hsl(236, 100%, 87%);
+  font-size: 12px;
+  font-weight: 400;
+  padding-top: 25px;
+}
+.person-name {
+  font-size: 26px;
+  color: rgb(243, 235, 235);
+  font-weight: 400;
+  padding-top: 7px;
+  padding-bottom: 18px;
+}
+.time-type-buttons {
+  padding: 30px 30px 15px 30px;
+}
+.time-buttons {
+  background: none;
+  border: none;
+  text-transform: capitalize;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+/*statCard*/
+/*statCard*/
+/*statCard*/
+.stat-card-container {
+  position: relative;
+  border-radius: 16px;
+}
+.stat-card {
+  padding: 20px;
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 14px;
+  position: absolute;
+  width: 100%;
+  height: 75%;
+  bottom: 0;
+  left: 0;
+}
+.stat-card-title {
+  display: flex;
+  color: rgb(238, 234, 234);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+.current-hours {
+  font-size: 34px;
+  color: rgb(238, 234, 234);
+  margin-bottom: 2px;
+}
+.previous-hours {
+  font-size: 12px;
+  text-transform: capitalize;
+  color: hsl(236, 100%, 87%);
+}
+.stat-card-container.work {
+  background-image: url("../assets/images/icon-work.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 70px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: hsl(15, 100%, 70%);
+}
+.stat-card-container.play {
+  background-image: url("../assets/images/icon-play.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 70px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: hsl(195, 74%, 62%);
+}
+.stat-card-container.study {
+  background-image: url("../assets/images/icon-study.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 70px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: hsl(348, 100%, 68%);
+}
+.stat-card-container.exercise {
+  background-image: url("../assets/images/icon-exercise.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 70px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: hsl(145, 58%, 55%);
+}
+.stat-card-container.social {
+  background-image: url("../assets/images/icon-social.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 70px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: hsl(264, 64%, 52%);
+}
+.stat-card-container.self-care {
+  background-image: url("../assets/images/icon-self-care.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 70px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: hsl(43, 84%, 65%);
+}
+
+@media screen and (max-width: 850px) {
+  .time-div {
+    grid-template-columns: 1fr 1fr;
+    min-height: 1200px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .time-div {
+    grid-template-columns: 1fr;
+    height: 1800px;
+    width: 85vw;
+    margin-top: 20px;
+  }
+  .profile-card {
+    height: 350px;
+  }
+  .stat-card-container {
+    transform: translateY(-330px);
+  }
+}
